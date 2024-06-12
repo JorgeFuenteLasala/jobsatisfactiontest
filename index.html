@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Are you satisfied with your job?</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/virgil.css">
+
+</head>
+
+
+<body>
+    <header id="header" class="header">
+        <div class="header--content">
+            <h1 class="logo"><span>JOB</span>SATISFACTION<span>TEST</span></h1>
+            <a target="_self" class="header--button hidden" id="resetbutton" onclick="location.reload();">Reset test</a>
+            <a href="https://www.linkedin.com/in/jorgefuentelasala/" class="header--caption" id="caption">by Jorge Fuente</a>
+        </div>
+    </header>
+    <article id="intro"></article>
+
+    <article id="mainframe" class="mainframe status1 right">
+
+        <section id="resultcontainer" class="result result__wrong">
+            <h1  id="result" class="result--number">00</h1>
+            <p id="resultsubtitle" class="result--text">Satisfactory</p>
+        </section>
+
+        <section class="steps">
+            <h3 class="steps--title title1"><b>Step 1</b> Set your preferences</h3>
+            <h3 class="steps--title title2"><b>Step 2</b> Evaluate the job</h3>
+        </section>
+
+        <section id="graphs" class="graphs">
+            <div class="graphs--container">
+                <canvas id="profilegraph" class="graphs--content graph1"></canvas>
+            </div>
+            <div class="graphs--container">
+                <canvas id="questionarygraph" class="graphs--content graph2"></canvas>
+            </div>
+        </section>
+
+        <section class="progress">
+            <div id="progressbar" class="progress--bar"></div>
+        </section>
+
+        <div class="actions--container">
+
+            <section class="actions">
+
+                <section id="profile" class="profile">
+                    <div class="profile--selector">
+                        <h3 class="profile--text">Choose the factor that is more important for you in a job</h3>
+                        <button class="button profile--button" id="button1"></button>
+                        <button class="button profile--button" id="button2"></button>
+                    </div>
+                </section>
+
+                <section id="test" class="test">
+                    <h3 class="test--title">Thinking about the job, select your grade of agreement about the following statements:</h3>
+                    <div class="test--content">
+                        <p class="test--text" id="testtext"></p>
+                        <div class="test--selector">
+                            <button class="button test--button" id="scale1"></button>
+                            <button class="button test--button" id="scale2"></button>
+                            <button class="button test--button" id="scale3"></button>
+                            <button class="button test--button" id="scale4"></button>
+                            <button class="button test--button" id="scale5"></button>
+                        </div>
+                        <div class="test--label">
+                            <p>Totally disagree</p>
+                            <p>Neutral</p>
+                            <p>Totally agree</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="legend" class="legend">
+                    <div class="legend--container">
+                        <div class="legend--mark what"></div>
+                        <div class="legend--text">
+                            <h3 class="legend--title">What <span id="whatscore"></span></h3>
+                            <p class="legend--paragraph">The content. What is the purpose of the company and your role on it.</p>
+                        </div>
+                    </div>
+                    <div class="legend--container">
+                        <div class="legend--mark who"></div>
+                        <div class="legend--text">
+                            <h3 class="legend--title">Who  <span id="whoscore"></span></h3>
+                            <p class="legend--paragraph">The people. Who are the members of the team and the leadership roles.</p>
+                        </div>
+                    </div>
+                    <div class="legend--container">
+                        <div class="legend--mark how"></div>
+                        <div class="legend--text">
+                            <h3 class="legend--title">How  <span id="howscore"></span></h3>
+                            <p class="legend--paragraph">The methodology. How is the methodology and technologies applied.</p>
+                        </div>
+                    </div>
+                    <div class="legend--container">
+                        <div class="legend--mark much"></div>
+                        <div class="legend--text">
+                            <h3 class="legend--title">How much <span id="muchscore"></span></h3>
+                            <p class="legend--paragraph">The compensation. How much are you getting from this position, in salary and benefits.</p>
+                        </div>
+                    </div>
+                    <div class="legend--container">
+                        <div class="legend--mark long"></div>
+                        <div class="legend--text">
+                            <h3 class="legend--title">How long <span id="longscore"></span></h3>
+                            <p class="legend--paragraph">The projection. How long will you have stability on this position and how it will affect your career.</p>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+            
+        </div>
+
+
+
+    </article>
+        
+
+
+    
+    <script src="js/chart.min.js"></script>
+    <script src="js/virgil.js"></script>
+</body>
+
+</html>
